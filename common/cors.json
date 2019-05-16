@@ -1,0 +1,17 @@
+[
+    {
+        "origin": [
+            "http://localhost:8100",
+            "http://localhost:8080",
+            "http://localhost",
+            "https://www.devaaaontheway.goaaa.com",
+            "https://www.qaaaaontheway.goaaa.com",
+            "https://www.aaaontheway.goaaa.com",
+            "https://*.firebaseapp.com"
+        ],
+        "method": [
+            "GET"
+        ],
+        "maxAgeSeconds": 3600
+    }
+]

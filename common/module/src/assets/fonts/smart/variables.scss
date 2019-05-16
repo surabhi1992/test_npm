@@ -1,0 +1,35 @@
+$smart-font-family: 'aaa-smart-fonts' !default;
+$smart-font-path: '#{$font-path}' !default;
+
+$smart: 'smart' !default;
+
+$dark: 'black' !default;
+$bold: 'bold' !default;
+$light: 'light' !default;
+$medium: 'medium' !default;
+$regular: 'regular' !default;
+$italic: 'italic' !default;
+$font-prefix: 'aaa-smart-fonts' !default;
+
+// font weights
+$font-weight-black: 900 !default;
+$font-weight-bold: bold !default;
+$font-weight-light: 200 !default;
+$font-weight-medium: 600 !default;
+$font-weight-regular: normal !default;
+
+// font paths
+$path-bold: '#{$smart-font-path}/#{$smart}-#{$bold}';
+$path-light: '#{$smart-font-path}/#{$smart}-#{$light}';
+$path-medium: '#{$smart-font-path}/#{$smart}-#{$medium}';
+$path-regular: '#{$smart-font-path}/#{$smart}-#{$regular}';
+$path-black: '#{$smart-font-path}/#{$smart}-#{$dark}';
+
+// $path-black: '#{$smart-font-path}/#{$smart}-#{$dark}';
+
+// italic font paths
+$path-black-italic: '#{$smart-font-path}/#{$smart}-#{$dark}-#{$italic}';
+$path-bold-italic: '#{$smart-font-path}/#{$smart}-#{$bold}-#{$italic}';
+$path-light-italic: '#{$smart-font-path}/#{$smart}-#{$light}-#{$italic}';
+$path-medium-italic: '#{$smart-font-path}/#{$smart}-#{$medium}-#{$italic}';
+$path-regular-italic: '#{$smart-font-path}/#{$smart}-#{$regular}-#{$italic}';

@@ -1,0 +1,143 @@
+@import "variables";
+
+@font-face {
+    font-family: '#{$smart-font-family}';
+    src: url('#{$path-black}.otf?e3884y') format('opentype');
+
+    font-weight: $font-weight-black;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '#{$smart-font-family}';
+    src: url('#{$path-medium}.otf?e3884y') format('opentype');
+
+    font-weight: $font-weight-medium;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '#{$smart-font-family}';
+    src: url('#{$path-bold}.otf?e3884y') format('opentype');
+
+    font-weight: $font-weight-bold;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '#{$smart-font-family}';
+    src: url('#{$path-light}.otf?e3884y') format('opentype');
+
+    font-weight: $font-weight-light;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: '#{$smart-font-family}';
+    src: url('#{$path-regular}.otf?e3884y') format('opentype');
+
+    font-weight: $font-weight-regular;
+    font-style: normal;
+}
+
+// italic font families
+@font-face {
+    font-family: '#{$smart-font-family}';
+    src: url('#{$path-black-italic}.otf?e3884y') format('opentype');
+
+    font-weight: $font-weight-black;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: '#{$smart-font-family}';
+    src: url('#{$path-medium-italic}.otf?e3884y') format('opentype');
+
+    font-weight: $font-weight-medium;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: '#{$smart-font-family}';
+    src: url('#{$path-bold-italic}.otf?e3884y') format('opentype');
+
+    font-weight: $font-weight-bold;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: '#{$smart-font-family}';
+    src: url('#{$path-light-italic}.otf?e3884y') format('opentype');
+
+    font-weight: $font-weight-light;
+    font-style: italic;
+}
+
+@font-face {
+    font-family: '#{$smart-font-family}';
+    src: url('#{$path-regular-italic}.otf?e3884y') format('opentype');
+
+    font-weight: $font-weight-regular;
+    font-style: italic;
+}
+
+body {
+    /* use !important to prevent issues with browser extensions that change fonts */
+    font-family: '#{$smart-font-family}' !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+
+    /* Better Font Rendering =========== */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+// Add these classes to the elements to apply smart fonts other than regular.
+.smart-black {
+    font-weight: $font-weight-black !important;
+}
+
+.smart-medium {
+    font-weight: $font-weight-medium !important;
+}
+
+.smart-bold {
+    font-weight: $font-weight-bold !important;
+}
+
+.smart-light {
+    font-weight: $font-weight-light !important;
+}
+
+.smart-regular {
+    font-weight: $font-weight-regular !important;
+}
+
+// classes for italic fonts
+.smart-black-italic {
+    font-weight: $font-weight-black !important;
+    font-style: italic !important;
+}
+
+.smart-medium-italic {
+    font-weight: $font-weight-medium !important;
+    font-style: italic !important;
+}
+
+.smart-bold-italic {
+    font-weight: $font-weight-bold !important;
+    font-style: italic !important;
+}
+
+.smart-light-italic {
+    font-weight: $font-weight-light !important;
+    font-style: italic !important;
+}
+
+.smart-regular-italic {
+    font-weight: $font-weight-regular !important;
+    font-style: italic !important;
+}

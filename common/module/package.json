@@ -1,0 +1,45 @@
+{
+  "name": "@goaaa-mwg-tt/ionic-common",
+  "version": "0.1.25",
+  "description": "A reusable module for common app code in Ionic.",
+  "main": "./dist/index.js",
+  "typings": "./dist/index.d.ts",
+  "files": [
+    "dist"
+  ],
+  "scripts": {
+    "ngc": "ngc",
+    "clean": "del /s /f /q dist && rmdir /S /Q dist || exit 0",
+    "build": "npm run clean && npm run ngc && cp -r src/assets ./dist",
+    "publishPackage": "npm run build && cp -r src/assets ./dist && npm publish",
+    "compodoc": "start http://localhost:8092 && compodoc -p tsconfig.json -w -s --port 8092"
+  },
+  "publishConfig": {
+    "registry": "https://nexus.goaaa.com/repository/aaa-tt-shared/"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT",
+  "devDependencies": {
+    "@angular/animations": "5.2.11",
+    "@angular/common": "5.2.11",
+    "@angular/compiler": "5.2.11",
+    "@angular/compiler-cli": "5.2.11",
+    "@angular/core": "5.2.11",
+    "@angular/forms": "5.2.11",
+    "@angular/http": "5.2.11",
+    "@angular/platform-browser": "5.2.11",
+    "@angular/platform-browser-dynamic": "5.2.11",
+    "@compodoc/compodoc": "^1.1.5",
+    "@types/node": "^8.0.45",
+    "rxjs": "5.5.11",
+    "tslint-config-airbnb": "^5.11.0",
+    "typescript": "^2.9.2",
+    "zone.js": "^0.8.26"
+  },
+  "dependencies": {
+    "firebase": "^5.8.6",
+    "moment": "^2.24.0",
+    "node": "^11.12.0"
+  }
+}

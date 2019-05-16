@@ -1,0 +1,7 @@
+organization=surabhi1992-github
+projectKey=npm_test12
+serverUrl=https://sonarcloud.io
+serverVersion=7.8.0.24676
+dashboardUrl=https://sonarcloud.io/dashboard?id=npm_test12
+ceTaskId=AWrBOLWJeCTcsUmsa7PO
+ceTaskUrl=https://sonarcloud.io/api/ce/task?id=AWrBOLWJeCTcsUmsa7PO

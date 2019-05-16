@@ -1,0 +1,27 @@
+<ion-header>
+  <ion-navbar>
+    <ion-title>
+      Common Test
+    </ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <button ion-button (click)="modifyTestData()">Update Data</button>
+    <h2>Firestore</h2>
+    <p>
+      {{this.firestoreTestVal}}
+    </p>
+    <h2>Firebase RTDB 1</h2>
+    <p>
+      {{this.rtdb1TestVal}}
+    </p>
+    <h2>Firebase RTDB 2</h2>
+    <p>
+      {{this.rtdb2TestVal}}
+    </p>
+    <p>
+      <button ion-button (click)="testUnsubscribe()">Unsubscribe</button>
+    </p>
+    <img [src]="settings.driverPhotoObservable | async">
+</ion-content>

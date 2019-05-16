@@ -1,0 +1,51 @@
+steps:
+
+- name: node:10.15.1
+  entrypoint: npm
+  args: ['install', '-D', 'typescript']
+  dir: 'common/module'
+
+- name: 'gcr.io/aaa-shared-builderprod/aaa-sonarscanner:v03'
+  dir: 'common/module' 
+  
+- name: node:10.15.1
+  entrypoint: npm
+  args: ['version', 'patch'] 
+  dir: 'common/module'
+  
+- name: 'gcr.io/cloud-builders/gcloud'
+  entrypoint: 'bash'
+  args:
+  - '-c'
+  - |
+    gsutil cp gs://shared-builderpreprod-bucket09750/nexus-npm-key.enc .
+    gcloud kms decrypt --location global --keyring aaa-devops-keyring --key aaa-devops-cryptokey --ciphertext-file nexus-npm-key.enc --plaintext-file nexus-npm-key.dec
+    echo "//nexus.goaaa.com/repository/aaa-tt-shared/:_authToken=NpmToken.$(cat nexus-npm-key.dec)
+    strict-ssl=false" > .npmrc
+  dir: 'common/module'
+
+- name: node:10.15.1
+  entrypoint: npm
+  args: ['config', 'set', '@goaaa-mwg-tt:registry', 'https://nexus.goaaa.com/repository/aaa-tt-shared/']
+  dir: 'common/module'
+
+- name: node:10.15.1
+  entrypoint: npm
+  args: ['install']
+  dir: 'common/module'
+
+- name: node:10.15.1
+  entrypoint: npm
+  args: ['run', 'build']
+  dir: 'common/module'
+
+- name: node:10.15.1
+  entrypoint: npm
+  args: ['run', 'publishPackage']
+  dir: 'common/module'
+
+- name: 'gcr.io/aaa-shared-builderprod/aaa-gitpush-image:v01'
+  args: ['develop', 'EmergencyRoadsideService-aaaontheway', 'workspace', 'package.json', 'common/module']
+  dir: 'common/module'
+  
+logsBucket: 'gs://shared-builderpreprod-bucket01/buildlogs/aaaontheway/develop'
